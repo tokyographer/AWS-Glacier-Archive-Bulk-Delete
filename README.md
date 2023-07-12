@@ -7,6 +7,7 @@ Deleting a Glacier Vault can be a cumbersome process that involves a series of s
 # Retreiving your Archive IDs requirements.
 
 In order to retreive your Achive IDs you must parse before the IDs from the output.json file obtained after running: 
+
 ```aws glacier describe-job --vault-name awsexamplevault --account-id 111122223333 --job-id *** jobid ***```
 
 The job takes several hours to complete. Once you have the output.json file you will have to parse the "ArchiveId" keys and list them in a txt file. The archivedelete.py script will iterate the ids deleting each one by one. The process can last several hours.
